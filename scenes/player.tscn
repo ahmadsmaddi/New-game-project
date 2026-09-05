@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://be8qbmt0fe144"]
+
+[ext_resource type="Script" uid="uid://c3ubxpp10k6x6" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cnxlgghiryb6i" path="res://assets/sprites/charcter 1.png" id="2_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_g2els")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_g2els")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_g2els")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_g2els")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyc6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gyc6d"]
+radius = 4.0
+height = 10.0
+
+[node name="player" type="CharacterBody2D" unique_id=738694541 groups=["Player"]]
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=80669898]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gyc6d")
+autoplay = "default"
+frame_progress = 0.88712007
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=66883011]
+position = Vector2(-2, 1)
+shape = SubResource("CapsuleShape2D_gyc6d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=736823503]
+zoom = Vector2(5.016, 5.016)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
