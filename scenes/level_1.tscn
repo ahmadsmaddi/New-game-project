@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ckwm7iqr41hap" path="res://assets/sprites/world_tileset.png" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://cerhgsee4qcmq" path="res://spikes.tscn" id="3_rus8k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
 texture = ExtResource("1_014kd")
@@ -165,3 +166,12 @@ tile_set = SubResource("TileSet_g7b7a")
 
 [node name="player" parent="TileMapLayer" unique_id=738694541 instance=ExtResource("2_bswci")]
 position = Vector2(-29, -251)
+
+[node name="spikes" parent="TileMapLayer" unique_id=1254689684 instance=ExtResource("3_rus8k")]
+position = Vector2(-59, -15)
+
+[node name="spikes2" parent="TileMapLayer" unique_id=280929761 instance=ExtResource("3_rus8k")]
+position = Vector2(-29, -15)
+
+[node name="spikes3" parent="TileMapLayer" unique_id=731173739 instance=ExtResource("3_rus8k")]
+position = Vector2(-89, -15)

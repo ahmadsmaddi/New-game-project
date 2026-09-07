@@ -53,17 +53,16 @@ height = 10.0
 [node name="player" type="CharacterBody2D" unique_id=738694541 groups=["Player"]]
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=80669898]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=80669898 groups=["Player"]]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gyc6d")
 autoplay = "default"
 frame_progress = 0.88712007
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=66883011]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=66883011 groups=["Player"]]
 position = Vector2(-2, 1)
 shape = SubResource("CapsuleShape2D_gyc6d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=736823503]
 zoom = Vector2(5.016, 5.016)
-position_smoothing_enabled = true
 position_smoothing_speed = 4.0
